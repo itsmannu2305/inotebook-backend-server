@@ -130,7 +130,6 @@ router.get("/resetpassword/:id/:token", async (req, res) => {
       res.status(200).json({ status: "200", validUser });
     } else {
       res.status(500).json({ status: "500", message: "User does not exist" });
-      console.log("user not valid");
     }
   } catch (error) {
     res.status(500).json({ error });
